@@ -1,16 +1,18 @@
-<p>about works!</p>
+Hello World from About page ! Bạn có <span class="postCss">&nbsp;{{posts ? posts.length : 0}}&nbsp;</span> tin nhắn
 <h3 class="overAge" appBold>Chào bạn {{name}} tuổi</h3>
 <h3 class="overAge" appBold>Bạn đã là {{age}} tuổi</h3>
 <button (click)="tangtuoi()">Tăng tuổi</button>
 <br>
-Comments: <br>
+<!-- Comments: <br>
 <span>{{comments | json}}</span>
 <br>
 Comments[0]: <br>
 <span *ngIf="comments">{{comments[0] | json}}</span>
-<br>
+<br> -->
 Posts: <br>
-<span *ngIf="posts">{{posts | json}}</span>
+<div *ngFor="let post of posts">
+    <li> {{post | json}} </li>
+</div>
 
-<br>
+<br><br>
 <button (click)="addPost()">Thêm post mới</button>

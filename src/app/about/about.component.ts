@@ -12,7 +12,7 @@ export class AboutComponent implements OnInit {
   public name = '';
   public age = '';
   public comments: any; 
-  public posts: any;
+  public posts: any[] = [];
   
   constructor(
     private common: CommonService,
@@ -35,7 +35,7 @@ export class AboutComponent implements OnInit {
 
     this.serverHttp.getPosts().subscribe((data) => {
       console.log('posts', data);
-      this.comments = data;
+      this.posts = data;
     })
     
   }
@@ -44,6 +44,7 @@ export class AboutComponent implements OnInit {
     const newData = { title: 'testing', author: 'author testing' };
     this.serverHttp.addPosts(newData).subscribe((data) => {
       console.log('addPost', data);
+      this.posts.push(data);
     })
   }
 
