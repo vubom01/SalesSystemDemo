@@ -7,6 +7,7 @@ import {
 import { throwError } from 'rxjs/internal/observable/throwError';
 import { Observable } from 'rxjs';
 import { catchError, map, tap } from 'rxjs/operators';
+import { Product } from '../interface/Product';
 
 
 @Injectable({
@@ -25,6 +26,21 @@ export class ServerHttpService {
   private REST_API_SERVER = 'http://localhost:3000';
 
   constructor(private httpClient: HttpClient) { }
+
+  public getProducts() {
+    const url = `${this.REST_API_SERVER}/products`;
+    return this.httpClient
+      .get<any>(url, this.httpOptions)
+      .pipe(catchError(this.handleError));
+  }
+
+  public postProducts(data: Product) {
+    const url = `${this.REST_API_SERVER}/products`;
+    return this.httpClient
+      .post<any>(url, data, this.httpOptions)
+      .pipe(catchError(this.handleError));
+  }
+
 
   public getComments() {
     const url = `${this.REST_API_SERVER}/comments`;

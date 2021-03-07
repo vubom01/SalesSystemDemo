@@ -18,7 +18,6 @@ export class AboutComponent implements OnInit {
     private common: CommonService,
     private serverHttp: ServerHttpService
     ) { 
-    // this.age = common.age;
   }
 
   ngOnInit(): void {

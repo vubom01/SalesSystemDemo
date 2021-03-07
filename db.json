@@ -1,28 +1,17 @@
 {
-  "students": [
+  "products": [
     {
-      "id": 1,
-      "code": "MSV-01",
-      "gender": "male"
-    }
-  ],
+      "name": "Nike AF1",
+      "code": "qe2w",
+      "price": "100",
+      "quanlity": "100"
+    },
 
-  "posts": [
     {
-      "id": 1,
-      "title": "json-server",
-      "author": "typicode"
+      "name": "Nike Air Jordan",
+      "code": "q12w",
+      "price": "120",
+      "quanlity": "400"
     }
-  ],
-  "comments": [
-    {
-      "id": 1,
-      "body": "some comment",
-      "postId": 1
-    }
-  ],
-  "profile": {
-    "name": "Huy Vu",
-    "age": 20
-  }
+  ]
 }

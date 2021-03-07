@@ -11,6 +11,8 @@ import { MatListModule } from '@angular/material/list';
 import { MatButtonModule } from '@angular/material/button';
 import { MatBadgeModule } from '@angular/material/badge';
 import { MatInputModule } from '@angular/material/input';
+import { MatSortModule } from '@angular/material/sort';
+import { MatTableModule } from '@angular/material/table';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -47,6 +49,8 @@ import { ProductsComponent } from './products/products.component';
     MatSidenavModule,
     MatListModule,
     MatButtonModule,
+    MatSortModule,
+    MatTableModule,
     FormsModule,
     ReactiveFormsModule,
     AppRoutingModule,

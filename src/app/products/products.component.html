@@ -1,12 +1,25 @@
-<table id="customers" style="border-collapse: collapse;">
-    <tr>
-        <th>Id</th>
-        <th>Code</th>
-        <th>Gender</th>
-      </tr>
-      <!-- <tr *ngFor="let student of students" class="student">
-        <td>{{student.id}}</td>
-        <td>{{student.code}}</td>
-        <td>{{student.gender}}</td>
-      </tr> -->
+<table mat-table [dataSource]="dataSource" matSort class="mat-elevation-z8">
+
+  <ng-container matColumnDef="name">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header> name </th>
+    <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="code">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header> code </th>
+    <td mat-cell *matCellDef="let element"> {{element.code}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="price">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header> price </th>
+    <td mat-cell *matCellDef="let element"> {{element.price}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="quanlity">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header> quanlity in stock </th>
+    <td mat-cell *matCellDef="let element"> {{element.quanlity}} </td>
+  </ng-container>
+
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
 </table>
