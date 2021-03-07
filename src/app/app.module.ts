@@ -21,6 +21,8 @@ import { BoldDirective } from './Directives/bold.directive';
 import { FormComponent } from './form/form.component';
 import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { ProductsComponent } from './products/products.component';
 
 @NgModule({
   declarations: [
@@ -31,6 +33,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     BoldDirective,
     FormComponent,
     ReactiveFormComponent,
+    DashboardComponent,
+    ProductsComponent,
   ],
   imports: [
     BrowserModule,

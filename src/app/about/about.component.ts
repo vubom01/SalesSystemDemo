@@ -22,11 +22,11 @@ export class AboutComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.serverHttp.getProfile().subscribe((data) => {
-      console.log('profile', data);
-      this.name = data.name;
-      this.age = data.age;
-    })
+    // this.serverHttp.getProfile().subscribe((data) => {
+    //   console.log('profile', data);
+    //   this.name = data.name;
+    //   this.age = data.age;
+    // })
 
     this.serverHttp.getComments().subscribe((data) => {
       console.log('comments', data);

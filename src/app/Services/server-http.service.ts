@@ -26,13 +26,6 @@ export class ServerHttpService {
 
   constructor(private httpClient: HttpClient) { }
 
-  public getProfile() {
-    const url = `${this.REST_API_SERVER}/profile`;
-    return this.httpClient
-      .get<any>(url, this.httpOptions)
-      .pipe(catchError(this.handleError));
-  }
-
   public getComments() {
     const url = `${this.REST_API_SERVER}/comments`;
     return this.httpClient
