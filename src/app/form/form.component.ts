@@ -9,6 +9,8 @@ export class FormComponent implements OnInit {
 
   public name = '';
   public password = '';
+  public vehicles = ['toyota', 'honda', 'nissan', 'ford', 'mustang'];
+  private selectedVehicle = '';
 
   constructor() { }
 
@@ -16,7 +18,14 @@ export class FormComponent implements OnInit {
   }
 
   public onSubmit() {
-    console.log(this.name);
-    console.log(this.password);
+    console.log("onSubmit");
+    console.log("name = " + this.name);
+    console.log("password = " + this.password);
+    console.log("selected Vehicle = " + this.selectedVehicle);
+  }
+
+  public selectVehicle(event: any) {
+    // console.log('selectVehicle', event.target.value);
+    this.selectedVehicle = event.target.value;
   }
 }
