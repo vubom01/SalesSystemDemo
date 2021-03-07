@@ -3,17 +3,17 @@
     Chào bạn
     <span class="overAge">{{name | uppercase}}</span>
 </h3>
-<h3 class="overAge">Bạn đã là {{age}} tuổi</h3>
+<h3 class="overAge" style="color: yellow">Bạn đã là {{age}} tuổi</h3>
 
 <span
     *ngIf="age < 18; then condition1; else condition2" 
     class="underAge">
 </span>
 <br>
-<ng-template #condition1 class="underAge">Bạn dưới 18 tuổi</ng-template>
+<ng-template #condition1><span appBold>Bạn dưới 18 tuổi</span></ng-template>
 <ng-template #condition2 class="overAge">Bạn bằng hoặc trên 18 tuổi, bạn quá già !</ng-template>
 
 <br>
-<button (click)="tangtuoi()">Tăng tuổi</button>
+<button (click)="tangtuoi()" appBold>Tăng tuổi</button>
 <br>
 
