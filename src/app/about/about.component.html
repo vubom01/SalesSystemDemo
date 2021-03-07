@@ -1,4 +1,7 @@
 Hello World from About page ! Bạn có <span class="postCss">&nbsp;{{posts ? posts.length : 0}}&nbsp;</span> tin nhắn
+<br><br>
+Số tin nhắn <span class="badge">{{posts ? posts.length : 0}}</span>
+<br>
 <h3 class="overAge" appBold>Chào bạn {{name}} tuổi</h3>
 <h3 class="overAge" appBold>Bạn đã là {{age}} tuổi</h3>
 <button (click)="tangtuoi()">Tăng tuổi</button>
@@ -10,9 +13,22 @@ Comments[0]: <br>
 <span *ngIf="comments">{{comments[0] | json}}</span>
 <br> -->
 Posts: <br>
-<div *ngFor="let post of posts">
+<!-- <div *ngFor="let post of posts">
     <li> {{post | json}} </li>
-</div>
+</div> -->
+<table id="customers" style="border-collapse: collapse;">
+    <tr>
+        <th>Id</th>
+        <th>Title</th>
+        <th>Author</th>
+      </tr>
+      <tr *ngFor="let post of posts">
+        <td>{{post.id}}</td>
+        <td>{{post.title}}</td>
+        <td>{{post.author}}</td>
+      </tr>
+</table>
 
 <br><br>
 <button (click)="addPost()">Thêm post mới</button>
+<span class="badge">{{posts ? posts.length : 0}}</span>
