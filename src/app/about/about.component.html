@@ -1,3 +1,16 @@
 <p>about works!</p>
+<h3 class="overAge" appBold>Chào bạn {{name}} tuổi</h3>
 <h3 class="overAge" appBold>Bạn đã là {{age}} tuổi</h3>
 <button (click)="tangtuoi()">Tăng tuổi</button>
+<br>
+Comments: <br>
+<span>{{comments | json}}</span>
+<br>
+Comments[0]: <br>
+<span *ngIf="comments">{{comments[0] | json}}</span>
+<br>
+Posts: <br>
+<span *ngIf="posts">{{posts | json}}</span>
+
+<br>
+<button (click)="addPost()">Thêm post mới</button>
