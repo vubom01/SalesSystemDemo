@@ -1,20 +1,20 @@
 {
   "products": [
     {
-      "name": "Ultra boost",
-      "code": "1231qwe",
-      "price": "50",
+      "name": "Ad",
+      "code": "d",
+      "price": "2",
       "quantity": "3",
-      "category": "Adidas",
-      "id": 5
+      "category": "12312a",
+      "id": 1
     },
     {
-      "name": "Jordan Low",
-      "code": "fr2qwe",
-      "price": "200",
-      "quantity": "5",
-      "category": "Nike",
-      "id": 6
+      "name": "Vu dep trai",
+      "code": "1",
+      "price": "1000000",
+      "quantity": "1",
+      "category": "Nha ong Ke",
+      "id": 2
     }
   ]
 }

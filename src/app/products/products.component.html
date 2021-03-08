@@ -29,13 +29,12 @@
 
     <ng-container matColumnDef="id">
       <mat-header-cell *matHeaderCellDef style="justify-content:right;">
-        <!-- <button mat-button style="color:white; background-color:darkgrey" (click)="resetListFilter()">Reset</button> -->
       </mat-header-cell>
       <mat-cell *matCellDef="let product" style="justify-content:right;">
-        <!-- <button mat-mini-fab style="background-color:teal; min-height: 30px;   margin: 5px;"
-          [routerLink]="['/products/edit', product.id]">
+        <button mat-mini-fab style="background-color:teal; min-height: 30px;   margin: 5px;"
+          [routerLink]="['/product-form/', product.id]">
           <mat-icon>edit</mat-icon>
-        </button> -->
+        </button>
         <button mat-mini-fab style="background-color:lightblue; min-height: 30px;  margin: 5px;" (click)="DeleteProduct(product.id)">
           <mat-icon>delete</mat-icon>
         </button>

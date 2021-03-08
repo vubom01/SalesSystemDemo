@@ -22,6 +22,15 @@
       <input matInput placeholder="" formControlName="category" require />
     </mat-form-field>
     <br>
-    <button (click)="onSubmit()" type="add" class="btn btn-success" [disabled]="!productForm.valid">Add</button>
+    <button type="submit" class="btn btn-success" [disabled]="!productForm.valid"(click)="saveAndGotoList()">
+      Lưu
+      <span *ngIf="id === 0">và quay về danh sách</span>
+    </button>
+    &nbsp;
+    <span *ngIf="id === 0">
+      <button type="submit" class="btn btn-success" [disabled]="!productForm.valid" (click)="save()">
+        Lưu và nhập mới
+      </button>
+    </span>
   </form>
 </div>

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Product } from '../interface/Product';
 import { CommonService } from '../Services/common.service';
 import { ServerHttpService } from '../Services/server-http.service';
@@ -12,6 +12,7 @@ import { ServerHttpService } from '../Services/server-http.service';
 })
 export class ProductFormComponent implements OnInit {
 
+  public id = 0;
   productForm = new FormGroup({
     name: new FormControl(''),
     code: new FormControl(''),
@@ -23,24 +24,62 @@ export class ProductFormComponent implements OnInit {
   constructor(
     private common: CommonService,
     private serverHttp: ServerHttpService,
-    private router: Router
+    private router: Router,
+    private route: ActivatedRoute
   ) { }
 
   ngOnInit(): void {
+    this.id = Number(this.route.snapshot.paramMap.get('id'));
+    if (this.id > 0) {
+      this.LoadData(this.id);
+    }
   }
 
-  public onSubmit() {
-    console.log('onSubmit');
+  private LoadData(id: any) {
+    this.serverHttp.getProduct(id).subscribe((data) => {
+      console.log('getProduct', data);
+      for (const controlName in this.productForm.controls) {
+        if (controlName) {
+          this.productForm.controls[controlName].setValue(data[controlName]);
+        }
+      }
+    });
+  }
+
+  public createNewData() {
     const newProduct = Object.assign({}, this.productForm.value);
     for (const controlName in this.productForm.controls) {
       if (controlName) {
         newProduct[controlName] = this.productForm.controls[controlName].value;
       }
     }
-    console.log(newProduct);
-    this.serverHttp.addProducts(newProduct).subscribe(data => {
-      console.log(data);
-    })
+    return newProduct;
+  }
+
+  public saveAndGotoList() {
+    if (this.id > 0) {
+      this.serverHttp.modifyProduct(this.id, this.createNewData())
+        .subscribe((data) => {
+          this.router.navigate(['products']);
+        });
+    } else {
+      this.serverHttp.addProduct(this.createNewData()).subscribe((data) => {
+        this.router.navigate(['products']);
+      });
+    }
+  }
+
+  public save() {
+    if (this.id > 0) {
+      this.serverHttp
+        .modifyProduct(this.id, this.createNewData())
+        .subscribe((data) => {
+        });
+    } else {
+      this.serverHttp.addProduct(this.createNewData()).subscribe((data) => {
+        this.productForm.reset();
+      });
+    }
   }
 
 }

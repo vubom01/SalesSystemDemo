@@ -45,7 +45,7 @@ export class ProductsComponent implements OnInit {
   } 
 
   public AddProduct() {
-    this.router.navigate(['product-form']);
+    this.router.navigate(['product-form', 0]);
   }
 
   public DeleteProduct(productId: number) {
@@ -54,5 +54,10 @@ export class ProductsComponent implements OnInit {
       console.log('delete', data);
       this.LoadData();
     })
+  }
+
+  public EditProduct(productId: number) {
+    this.router.navigate(['product-form', productId]);
+
   }
 }

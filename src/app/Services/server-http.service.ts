@@ -34,7 +34,7 @@ export class ServerHttpService {
       .pipe(catchError(this.handleError));
   }
 
-  public addProducts(data: Product) {
+  public addProduct(data: Product) {
     const url = `${this.REST_API_SERVER}/products`;
     return this.httpClient
       .post<any>(url, data, this.httpOptions)
@@ -47,7 +47,20 @@ export class ServerHttpService {
       .delete<any>(url)
       .pipe(catchError(this.handleError));
   }
-  
+
+  public modifyProduct(studentId: number, data: Product) {
+    const url = `${this.REST_API_SERVER}/products/` + studentId;
+    return this.httpClient
+      .put<any>(url, data, this.httpOptions)
+      .pipe(catchError(this.handleError));
+  }
+
+  public getProduct(productId: number) {
+    const url = `${this.REST_API_SERVER}/products/` + productId;
+    return this.httpClient
+      .get<any>(url, this.httpOptions)
+      .pipe(catchError(this.handleError));
+  }
 
 
 
