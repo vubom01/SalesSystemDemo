@@ -1,6 +1,6 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { MatSidenav } from '@angular/material/sidenav';
-import { ServerHttpService } from './Services/server-http.service';
+import { BackendService } from './_services/backend.service';
 
 @Component({
   selector: 'app-root',
@@ -15,7 +15,7 @@ export class AppComponent implements OnInit {
   public totalStudents = 0;
 
   constructor(
-    private serverHttp: ServerHttpService
+    private serverHttp: BackendService
   ) {}
   
   ngOnInit(): void {

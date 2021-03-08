@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { ServerHttpService } from '../Services/server-http.service';
 
 @Component({
   selector: 'app-about',

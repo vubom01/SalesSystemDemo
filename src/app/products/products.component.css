@@ -7,3 +7,16 @@ table {
 th.mat-sort-header-sorted {
     color: black;
 }
+
+thead {
+  color: #337AB7;
+}
+
+
+.title-spacer {
+  flex: 1 1 auto;
+}
+
+.search-form-fileld {
+  margin-right: 20px;
+}

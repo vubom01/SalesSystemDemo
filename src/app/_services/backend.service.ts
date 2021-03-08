@@ -14,7 +14,7 @@ import { Product } from '../interface/Product';
   providedIn: 'root'
 })
 
-export class ServerHttpService {
+export class BackendService {
 
   private httpOptions = {
     headers: new HttpHeaders({

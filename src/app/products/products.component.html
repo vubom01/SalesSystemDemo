@@ -1,5 +1,26 @@
 <div>
-  <button (click)="AddProduct()">Thêm</button>
+  <mat-toolbar>
+    <mat-toolbar-row>
+      <button mat-mini-fab style="margin-right:10px; background-color:#e07c9e" (click)="AddProduct()">
+        <mat-icon>add</mat-icon>
+      </button>
+      <button mat-mini-fab style="margin-right:10px; background-color:#a28b6e" >
+        <!-- (click)="sidenav.toggle()" -->
+        <mat-icon>search</mat-icon>
+      </button>
+      <button mat-mini-fab style="margin-right:10px; background-color:darkgray" >
+        <mat-icon>refresh</mat-icon>
+      </button>
+
+      <span class="title-spacer"></span>
+      <input class="form-control" type="text" name="search" autocomplete="off">
+      <!-- <mat-form-field appearance="standard" class="search-form-fileld">
+        <mat-label>Filter</mat-label>
+        <input matInput>
+        <mat-icon>filter_list</mat-icon>
+      </mat-form-field> -->
+    </mat-toolbar-row>
+  </mat-toolbar>
   <table mat-table [dataSource]="dataSource" matSort class="mat-elevation-z8">
 
     <ng-container matColumnDef="name">

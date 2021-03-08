@@ -8,7 +8,7 @@ import { ProductFormComponent } from './product-form/product-form.component';
 import { ProductsComponent } from './products/products.component';
 
 const routes: Routes = [
-  { path: '', component: DashboardComponent },
+  { path: '', component: LoginComponent },
   { path: 'dashboard', component: DashboardComponent },
   { path: 'login', component: LoginComponent},
   { path: 'products', component: ProductsComponent},

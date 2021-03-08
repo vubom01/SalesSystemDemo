@@ -3,7 +3,7 @@ import { MatSort } from '@angular/material/sort';
 import { MatTableDataSource } from '@angular/material/table';
 import { Router } from '@angular/router';
 import { Product } from '../interface/Product';
-import { ServerHttpService } from '../Services/server-http.service';
+import { BackendService } from '../_services/backend.service';
 
 @Component({
   selector: 'products.component',
@@ -19,7 +19,7 @@ export class ProductsComponent implements OnInit {
   @ViewChild(MatSort) sort: MatSort | any;
 
   constructor(
-    private serverHttp: ServerHttpService,
+    private serverHttp: BackendService,
     private router: Router
   ) {
   }
@@ -56,6 +56,5 @@ export class ProductsComponent implements OnInit {
 
   public EditProduct(productId: number) {
     this.router.navigate(['product-form', productId]);
-
   }
 }
