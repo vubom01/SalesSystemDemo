@@ -57,4 +57,10 @@ export class ProductsComponent implements OnInit {
   public EditProduct(productId: number) {
     this.router.navigate(['product-form', productId]);
   }
+
+  applyFilter(filterValue: string) {
+    filterValue = filterValue.trim();
+    filterValue = filterValue.toLowerCase();
+    this.dataSource.filter = filterValue;
+  }
 }

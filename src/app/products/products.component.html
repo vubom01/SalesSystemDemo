@@ -4,10 +4,6 @@
       <button mat-mini-fab style="margin-right:10px; background-color:#e07c9e" (click)="AddProduct()">
         <mat-icon>add</mat-icon>
       </button>
-      <button mat-mini-fab style="margin-right:10px; background-color:#a28b6e" >
-        <!-- (click)="sidenav.toggle()" -->
-        <mat-icon>search</mat-icon>
-      </button>
       <button mat-mini-fab style="margin-right:10px; background-color:darkgray" >
         <mat-icon>refresh</mat-icon>
       </button>
@@ -16,7 +12,7 @@
       <!-- <input class="form-control" type="text" name="search" autocomplete="off"> -->
       <mat-form-field appearance="standard" class="search-form-fileld">
         <mat-label>Filter</mat-label>
-        <input matInput>
+        <input matInput (keyup)="applyFilter($any($event.target).value)">
         <mat-icon>filter_list</mat-icon>
       </mat-form-field>
     </mat-toolbar-row>
