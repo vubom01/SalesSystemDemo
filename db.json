@@ -1,20 +1,45 @@
 {
-  "products": [
-    {
-      "name": "qweqwe1qweqwe2",
-      "code": "1",
-      "price": "1000000",
-      "quantity": "1",
-      "category": "asdw",
-      "id": 2
-    },
-    {
-      "name": "asdasd",
-      "code": "12wq1",
-      "price": "50",
-      "quantity": "4",
-      "category": "Seafoods",
-      "id": 3
-    }
-  ]
+  "products":
+  [{
+    "name": "hero Product",
+    "code": "q1e",
+    "price": "500",
+    "quantity": "4",
+    "category": "ABC"
+  },{
+    "name": "P2roduct 1",
+    "code": "q2e",
+    "price": "234",
+    "quantity": "5",
+    "category": "DCD"
+  },{
+    "name": "P1roduct 2",
+    "code": "q1e",
+    "price": "121",
+    "quantity": "4",
+    "category": "GGG"
+  },{
+    "name": "P3roduct 3",
+    "code": "q3d",
+    "price": "99",
+    "quantity": "",
+    "category": "ABC"
+  },{
+    "name": "P1roduct 4",
+    "code": "q4c",
+    "price": "102",
+    "quantity": "2",
+    "category": "QWE"
+  },{
+    "name": "P2roduct 5",
+    "code": "q1q",
+    "price": "58",
+    "category": "ASD"
+  },{
+    "name": "P1roduct 6",
+    "code": "qxd",
+    "price": "67",
+    "quantity": "9",
+    "category": "RAM"
+  }]
 }

@@ -23,6 +23,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { ProductsComponent } from './products/products.component';
 import { ProductFormComponent } from './product-form/product-form.component';
 import { LoginComponent } from './login/login.component';
+import { OrderComponent } from './order/order.component';
 
 @NgModule({
   declarations: [
@@ -33,6 +34,7 @@ import { LoginComponent } from './login/login.component';
     ProductsComponent,
     ProductFormComponent,
     LoginComponent,
+    OrderComponent,
   ],
   imports: [
     BrowserModule,
