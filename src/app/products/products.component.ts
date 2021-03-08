@@ -3,7 +3,6 @@ import { MatSort } from '@angular/material/sort';
 import { MatTableDataSource } from '@angular/material/table';
 import { Router } from '@angular/router';
 import { Product } from '../interface/Product';
-import { CommonService } from '../Services/common.service';
 import { ServerHttpService } from '../Services/server-http.service';
 
 @Component({
@@ -20,7 +19,6 @@ export class ProductsComponent implements OnInit {
   @ViewChild(MatSort) sort: MatSort | any;
 
   constructor(
-    private common: CommonService,
     private serverHttp: ServerHttpService,
     private router: Router
   ) {

@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Product } from '../interface/Product';
-import { CommonService } from '../Services/common.service';
 import { ServerHttpService } from '../Services/server-http.service';
 
 @Component({
@@ -22,7 +21,6 @@ export class ProductFormComponent implements OnInit {
   });
 
   constructor(
-    private common: CommonService,
     private serverHttp: ServerHttpService,
     private router: Router,
     private route: ActivatedRoute

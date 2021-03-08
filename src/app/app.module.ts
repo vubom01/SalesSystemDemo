@@ -16,29 +16,23 @@ import { MatTableModule } from '@angular/material/table';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
-import { BoldDirective } from './Directives/bold.directive';
-import { FormComponent } from './form/form.component';
-import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { ProductsComponent } from './products/products.component';
 import { ProductFormComponent } from './product-form/product-form.component';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent,
     AboutComponent,
     PageNotFoundComponent,
-    BoldDirective,
-    FormComponent,
-    ReactiveFormComponent,
     DashboardComponent,
     ProductsComponent,
     ProductFormComponent,
+    LoginComponent,
   ],
   imports: [
     BrowserModule,

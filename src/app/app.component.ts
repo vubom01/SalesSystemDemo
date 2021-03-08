@@ -1,6 +1,5 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { MatSidenav } from '@angular/material/sidenav';
-import { CommonService } from './Services/common.service';
 import { ServerHttpService } from './Services/server-http.service';
 
 @Component({
@@ -16,12 +15,10 @@ export class AppComponent implements OnInit {
   public totalStudents = 0;
 
   constructor(
-    private common: CommonService,
     private serverHttp: ServerHttpService
   ) {}
   
   ngOnInit(): void {
-    // throw new Error('Method not implemented.');
   }
 
   public openLeftSide() {
