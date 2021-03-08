@@ -13,7 +13,7 @@ import { ServerHttpService } from '../Services/server-http.service';
 })
 export class ProductsComponent implements OnInit {
 
-  displayedColumns: string[] = ['name', 'code', 'price', 'quantity', 'category'];
+  displayedColumns: string[] = ['name', 'code', 'price', 'quantity', 'category', 'id'];
   public products: Product[] = [];
   public dataSource: any = null;
 
@@ -35,7 +35,24 @@ export class ProductsComponent implements OnInit {
     })
   }
 
+  private LoadData() {
+    this.serverHttp.getProducts().subscribe(data => {
+      console.log('products', data);
+      this.products = data;
+      this.dataSource = new MatTableDataSource(this.products);
+      this.dataSource.sort = this.sort;
+    })
+  } 
+
   public AddProduct() {
     this.router.navigate(['product-form']);
+  }
+
+  public DeleteProduct(productId: number) {
+    console.log('product: ' + productId);
+    this.serverHttp.deleteProducts(productId).subscribe((data) => {
+      console.log('delete', data);
+      this.LoadData();
+    })
   }
 }

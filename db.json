@@ -1,84 +1,20 @@
 {
   "products": [
     {
-      "id": 1,
-      "name": "Nike AF1",
-      "code": "qe2w",
-      "price": 100,
-      "quantity": 100,
-      "category": "vu1"
-    },
-    {
-      "id": 2,
-      "name": "Nike Air Jordan",
-      "code": "q12w",
-      "price": 120,
-      "quantity": 400,
-      "category": "vu2"
-    },
-    {
-      "name": "",
-      "code": "",
-      "price": "",
-      "quantity": "",
-      "category": "",
-      "id": 3
-    },
-    {
-      "name": "2",
-      "code": "3",
-      "price": "4",
-      "quantity": "5",
-      "category": "6",
-      "id": 4
-    },
-    {
-      "name": "2",
-      "code": "3",
-      "price": "4",
-      "quantity": "5",
-      "category": "6",
+      "name": "Ultra boost",
+      "code": "1231qwe",
+      "price": "50",
+      "quantity": "3",
+      "category": "Adidas",
       "id": 5
     },
     {
-      "name": "2",
-      "code": "3",
-      "price": "4",
-      "quantity": "12312",
-      "category": "123",
+      "name": "Jordan Low",
+      "code": "fr2qwe",
+      "price": "200",
+      "quantity": "5",
+      "category": "Nike",
       "id": 6
-    },
-    {
-      "name": "3",
-      "code": "4",
-      "price": "5",
-      "quantity": "6",
-      "category": "7",
-      "id": 7
-    },
-    {
-      "name": "",
-      "code": "",
-      "price": "",
-      "quantity": "123123123123123",
-      "category": "",
-      "id": 8
-    },
-    {
-      "name": "",
-      "code": "",
-      "price": "2",
-      "quantity": "",
-      "category": "",
-      "id": 9
-    },
-    {
-      "name": "d",
-      "code": "f",
-      "price": "g",
-      "quantity": "a",
-      "category": "c",
-      "id": 10
     }
   ]
 }

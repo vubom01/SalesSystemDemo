@@ -40,7 +40,27 @@ export class ServerHttpService {
       .post<any>(url, data, this.httpOptions)
       .pipe(catchError(this.handleError));
   }
+
+  public deleteProducts(productId: number) {
+    const url = `${this.REST_API_SERVER}/products/` + productId;
+    return this.httpClient
+      .delete<any>(url)
+      .pipe(catchError(this.handleError));
+  }
   
+
+
+
+
+
+
+
+
+
+
+
+
+
   public addPosts(data: any) {
     const url = `${this.REST_API_SERVER}/posts`;
     return this.httpClient
