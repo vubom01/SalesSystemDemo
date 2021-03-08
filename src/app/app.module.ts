@@ -12,6 +12,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatBadgeModule } from '@angular/material/badge';
 import { MatInputModule } from '@angular/material/input';
 import { MatSortModule } from '@angular/material/sort';
+import { MatCardModule } from '@angular/material/card';
 import { MatTableModule } from '@angular/material/table';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -24,6 +25,7 @@ import { ProductsComponent } from './products/products.component';
 import { ProductFormComponent } from './product-form/product-form.component';
 import { LoginComponent } from './login/login.component';
 import { OrderComponent } from './order/order.component';
+import { CustomerComponent } from './customer/customer.component';
 
 @NgModule({
   declarations: [
@@ -35,6 +37,7 @@ import { OrderComponent } from './order/order.component';
     ProductFormComponent,
     LoginComponent,
     OrderComponent,
+    CustomerComponent,
   ],
   imports: [
     BrowserModule,
@@ -49,6 +52,7 @@ import { OrderComponent } from './order/order.component';
     MatButtonModule,
     MatSortModule,
     MatTableModule,
+    MatCardModule,
     FormsModule,
     ReactiveFormsModule,
     AppRoutingModule,
