@@ -1,0 +1,27 @@
+<div class="container">
+  <h1>Add new product</h1>
+  <form [formGroup]="productForm">
+    <mat-form-field class="form-header">
+      <mat-label>Name</mat-label>
+      <input matInput placeholder="" formControlName="name" require />
+    </mat-form-field>
+    <mat-form-field class="form-header">
+      <mat-label>Code</mat-label>
+      <input matInput placeholder="" formControlName="code" require />
+    </mat-form-field>
+    <mat-form-field class="form-header">
+      <mat-label>Price</mat-label>
+      <input matInput placeholder="" formControlName="price" require />
+    </mat-form-field>
+    <mat-form-field class="form-header">
+      <mat-label>Quantity</mat-label>
+      <input matInput placeholder="" formControlName="quantity" require />
+    </mat-form-field>
+    <mat-form-field class="form-header">
+      <mat-label>Category</mat-label>
+      <input matInput placeholder="" formControlName="category" require />
+    </mat-form-field>
+    <br>
+    <button (click)="onSubmit()" type="add" class="btn btn-success" [disabled]="!productForm.valid">Add</button>
+  </form>
+</div>

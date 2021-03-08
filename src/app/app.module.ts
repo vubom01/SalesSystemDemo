@@ -25,6 +25,7 @@ import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { ProductsComponent } from './products/products.component';
+import { ProductFormComponent } from './product-form/product-form.component';
 
 @NgModule({
   declarations: [
@@ -37,6 +38,7 @@ import { ProductsComponent } from './products/products.component';
     ReactiveFormComponent,
     DashboardComponent,
     ProductsComponent,
+    ProductFormComponent,
   ],
   imports: [
     BrowserModule,

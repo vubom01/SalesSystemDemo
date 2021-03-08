@@ -34,8 +34,15 @@ export class ServerHttpService {
       .pipe(catchError(this.handleError));
   }
 
-  public postProducts(data: Product) {
+  public addProducts(data: Product) {
     const url = `${this.REST_API_SERVER}/products`;
+    return this.httpClient
+      .post<any>(url, data, this.httpOptions)
+      .pipe(catchError(this.handleError));
+  }
+  
+  public addPosts(data: any) {
+    const url = `${this.REST_API_SERVER}/posts`;
     return this.httpClient
       .post<any>(url, data, this.httpOptions)
       .pipe(catchError(this.handleError));
@@ -56,12 +63,7 @@ export class ServerHttpService {
       .pipe(catchError(this.handleError));
   }
 
-  public addPosts(data: any) {
-    const url = `${this.REST_API_SERVER}/posts`;
-    return this.httpClient
-      .post<any>(url, data, this.httpOptions)
-      .pipe(catchError(this.handleError));
-  }
+
 
   private handleError(error: HttpErrorResponse) {
     if (error.error instanceof ErrorEvent) {

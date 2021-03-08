@@ -1,6 +1,7 @@
 import { Component, ViewChild, OnInit } from '@angular/core';
 import { MatSort } from '@angular/material/sort';
 import { MatTableDataSource } from '@angular/material/table';
+import { Router } from '@angular/router';
 import { Product } from '../interface/Product';
 import { CommonService } from '../Services/common.service';
 import { ServerHttpService } from '../Services/server-http.service';
@@ -12,7 +13,7 @@ import { ServerHttpService } from '../Services/server-http.service';
 })
 export class ProductsComponent implements OnInit {
 
-  displayedColumns: string[] = ['name', 'code', 'price', 'quanlity'];
+  displayedColumns: string[] = ['name', 'code', 'price', 'quantity', 'category'];
   public products: Product[] = [];
   public dataSource: any = null;
 
@@ -20,17 +21,21 @@ export class ProductsComponent implements OnInit {
 
   constructor(
     private common: CommonService,
-    private serverHttp: ServerHttpService
+    private serverHttp: ServerHttpService,
+    private router: Router
   ) {
   }
 
   ngOnInit(): void {
-
       this.serverHttp.getProducts().subscribe((data) => {
       console.log('products', data);
       this.products = data;
       this.dataSource = new MatTableDataSource(this.products);
       this.dataSource.sort = this.sort;
     })
+  }
+
+  public AddProduct() {
+    this.router.navigate(['product-form']);
   }
 }
