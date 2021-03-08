@@ -23,13 +23,13 @@
     </mat-form-field>
     <br>
     <button type="submit" class="btn btn-success" [disabled]="!productForm.valid"(click)="saveAndGotoList()">
-      Lưu
-      <span *ngIf="id === 0">và quay về danh sách</span>
+      Save
+      <span *ngIf="id === 0">and back</span>
     </button>
     &nbsp;
     <span *ngIf="id === 0">
       <button type="submit" class="btn btn-success" [disabled]="!productForm.valid" (click)="save()">
-        Lưu và nhập mới
+        Save and new
       </button>
     </span>
   </form>

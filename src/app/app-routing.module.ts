@@ -4,7 +4,7 @@ import { AboutComponent } from './about/about.component';
 import { CustomerComponent } from './customer/customer.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { LoginComponent } from './login/login.component';
-import { OrderFormComponent } from './order/order-form/order-form.component';
+import { OrderFormComponent } from './order-form/order-form.component';
 import { OrderComponent } from './order/order.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { ProductFormComponent } from './product-form/product-form.component';

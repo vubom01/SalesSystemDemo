@@ -1,0 +1,38 @@
+<div class="container">
+    <h1>Add new order</h1>
+    <form [formGroup]="orderForm">
+        <mat-form-field class="form-field" appearance="outline">
+            <input matInput [matDatepicker]="picker" placeholder="" formControlName="date" require />
+            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+        </mat-form-field>
+
+      <mat-form-field class="form-header">
+        <mat-label>Name</mat-label>
+        <input matInput placeholder="" formControlName="name" require />
+      </mat-form-field>
+      <mat-form-field class="form-header">
+        <mat-label>Code</mat-label>
+        <input matInput placeholder="" formControlName="code" require />
+      </mat-form-field>
+      <mat-form-field class="form-header">
+        <mat-label>Quantity</mat-label>
+        <input matInput placeholder="" formControlName="quantity" require />
+      </mat-form-field>
+      <mat-form-field class="form-header">
+        <mat-label>Unit price</mat-label>
+        <input matInput placeholder="" formControlName="price" require />
+      </mat-form-field>
+      <br>
+      <button type="submit" class="btn btn-success" [disabled]="!orderForm.valid"(click)="saveAndGotoList()">
+        Save
+        <span *ngIf="id === 0">and back</span>
+      </button>
+      &nbsp;
+      <span *ngIf="id === 0">
+        <button type="submit" class="btn btn-success" [disabled]="!orderForm.valid" (click)="save()">
+          Save and new
+        </button>
+      </span>
+    </form>
+  </div>

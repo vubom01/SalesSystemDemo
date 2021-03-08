@@ -8,6 +8,7 @@ import { throwError } from 'rxjs/internal/observable/throwError';
 import { Observable } from 'rxjs';
 import { catchError, map, tap } from 'rxjs/operators';
 import { Product } from '../interface/Product';
+import { Order } from '../interface/Order';
 
 
 @Injectable({
@@ -19,8 +20,6 @@ export class BackendService {
   private httpOptions = {
     headers: new HttpHeaders({
       'Content-Type': 'application/json',
-      // Authorization: 'my-auth-token',
-      // Authorization: 'Basic ' + btoa('username:password'),
     }),
   };
   private REST_API_SERVER = 'http://localhost:3000';
@@ -34,8 +33,22 @@ export class BackendService {
       .pipe(catchError(this.handleError));
   }
 
+  public getOrders() {
+    const url = `${this.REST_API_SERVER}/orders`;
+    return this.httpClient
+      .get<any>(url, this.httpOptions)
+      .pipe(catchError(this.handleError));
+  }
+
   public addProduct(data: Product) {
     const url = `${this.REST_API_SERVER}/products`;
+    return this.httpClient
+      .post<any>(url, data, this.httpOptions)
+      .pipe(catchError(this.handleError));
+  }
+
+  public addOrder(data: Order) {
+    const url = `${this.REST_API_SERVER}/orders`;
     return this.httpClient
       .post<any>(url, data, this.httpOptions)
       .pipe(catchError(this.handleError));
@@ -48,15 +61,37 @@ export class BackendService {
       .pipe(catchError(this.handleError));
   }
 
-  public modifyProduct(studentId: number, data: Product) {
-    const url = `${this.REST_API_SERVER}/products/` + studentId;
+  public deleteOrders(orderId: number) {
+    const url = `${this.REST_API_SERVER}/orders/` + orderId;
+    return this.httpClient
+      .delete<any>(url)
+      .pipe(catchError(this.handleError));
+  }
+
+  public modifyProduct(productId: number, data: Product) {
+    const url = `${this.REST_API_SERVER}/products/` + productId;
     return this.httpClient
       .put<any>(url, data, this.httpOptions)
       .pipe(catchError(this.handleError));
   }
 
+  public modifyOrder(orderId: number, data: Order) {
+    const url = `${this.REST_API_SERVER}/orders/` + orderId;
+    return this.httpClient
+      .put<any>(url, data, this.httpOptions)
+      .pipe(catchError(this.handleError));
+  }
+
+
   public getProduct(productId: number) {
     const url = `${this.REST_API_SERVER}/products/` + productId;
+    return this.httpClient
+      .get<any>(url, this.httpOptions)
+      .pipe(catchError(this.handleError));
+  }
+
+  public getOrder(orderId: number) {
+    const url = `${this.REST_API_SERVER}/orders/` + orderId;
     return this.httpClient
       .get<any>(url, this.httpOptions)
       .pipe(catchError(this.handleError));

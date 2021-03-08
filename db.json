@@ -1,45 +1,69 @@
 {
-  "products":
-  [{
-    "name": "hero Product",
-    "code": "q1e",
-    "price": "500",
-    "quantity": "4",
-    "category": "ABC"
-  },{
-    "name": "P2roduct 1",
-    "code": "q2e",
-    "price": "234",
-    "quantity": "5",
-    "category": "DCD"
-  },{
-    "name": "P1roduct 2",
-    "code": "q1e",
-    "price": "121",
-    "quantity": "4",
-    "category": "GGG"
-  },{
-    "name": "P3roduct 3",
-    "code": "q3d",
-    "price": "99",
-    "quantity": "",
-    "category": "ABC"
-  },{
-    "name": "P1roduct 4",
-    "code": "q4c",
-    "price": "102",
-    "quantity": "2",
-    "category": "QWE"
-  },{
-    "name": "P2roduct 5",
-    "code": "q1q",
-    "price": "58",
-    "category": "ASD"
-  },{
-    "name": "P1roduct 6",
-    "code": "qxd",
-    "price": "67",
-    "quantity": "9",
-    "category": "RAM"
-  }]
+  "products": [
+    {
+      "name": "P2roduct 5",
+      "code": "q1q",
+      "price": "58",
+      "category": "ASD",
+      "id": 6
+    },
+    {
+      "name": "P1roduct 6",
+      "code": "qxd",
+      "price": "67",
+      "quantity": "9",
+      "category": "RAM",
+      "id": 7
+    },
+    {
+      "name": "P2roduct 2",
+      "code": "qwe123",
+      "price": "123",
+      "quantity": "4",
+      "category": "SSE",
+      "id": 8
+    },
+    {
+      "name": "P4roduct 123123",
+      "code": "1234ddd",
+      "price": "53",
+      "quantity": "12",
+      "category": "SKL",
+      "id": 9
+    },
+    {
+      "name": "Product hero",
+      "code": "UIOO1",
+      "price": "120",
+      "quantity": "8",
+      "category": "UIO",
+      "id": 10
+    },
+    {
+      "date": "2017-02-08T17:00:00.000Z",
+      "name": "Product Hero",
+      "code": "qwe2",
+      "quantity": "4",
+      "unit_price": "78",
+      "id": 11
+    }
+  ],
+  "orders": [
+    {
+      "date": "2021-03-09T17:00:00.000Z",
+      "name": "Product Super Hero",
+      "code": "PSH",
+      "quantity": "8",
+      "price": "400",
+      "id": 2
+    },
+    {
+      "date": "2021-03-08T17:00:00.000Z",
+      "name": "p3woasdcz",
+      "code": "hjkl",
+      "quantity": "4",
+      "price": "125",
+      "id": 3
+    }
+  ]
 }

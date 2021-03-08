@@ -1,8 +1,8 @@
-export interface Product {
+export interface Order {
+    date: string;
     name: string;
     code: string;
-    price: string;
     quantity: string;
-    category: string;
+    price: string;
     id: number;
 }

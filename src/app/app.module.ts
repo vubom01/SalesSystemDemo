@@ -14,6 +14,9 @@ import { MatInputModule } from '@angular/material/input';
 import { MatSortModule } from '@angular/material/sort';
 import { MatCardModule } from '@angular/material/card';
 import { MatTableModule } from '@angular/material/table';
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatNativeDateModule } from '@angular/material/core';
+
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -26,6 +29,7 @@ import { ProductFormComponent } from './product-form/product-form.component';
 import { LoginComponent } from './login/login.component';
 import { OrderComponent } from './order/order.component';
 import { CustomerComponent } from './customer/customer.component';
+import { OrderFormComponent } from './order-form/order-form.component';
 
 @NgModule({
   declarations: [
@@ -38,6 +42,7 @@ import { CustomerComponent } from './customer/customer.component';
     LoginComponent,
     OrderComponent,
     CustomerComponent,
+    OrderFormComponent,
   ],
   imports: [
     BrowserModule,
@@ -53,6 +58,9 @@ import { CustomerComponent } from './customer/customer.component';
     MatSortModule,
     MatTableModule,
     MatCardModule,
+    MatBadgeModule,
+    MatDatepickerModule,
+    MatNativeDateModule,
     FormsModule,
     ReactiveFormsModule,
     AppRoutingModule,
